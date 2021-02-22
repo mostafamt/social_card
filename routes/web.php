@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 
 Route::get('/profile', function () {
@@ -24,4 +24,7 @@ Route::get('/add', function () {
     return view('add');
 });
 
-Route::get('/home', 'PagesController@home');
+Route::get('/', 'PagesController@home');
+
+Route::get('/create', 'PagesController@create');
+Route::post('/create', 'PagesController@store');

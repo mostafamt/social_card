@@ -9,7 +9,7 @@
 
 <body>
   @extends('master')
-  @section('title', 'Home')
+  @section('title', 'Social Card')
 
   @section('content')
   <div class="container p-4">

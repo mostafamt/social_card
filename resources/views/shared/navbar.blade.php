@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">منظومة الكارت الاجتماعي</a>
+    <a class="navbar-brand" href="/">منظومة الكارت الاجتماعي</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
             الاعدادات
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">اضافة</a></li>
+            <li><a class="dropdown-item" href="/create">اضافة</a></li>
             <li><a class="dropdown-item" href="#">تعديل</a></li>
             <li>
               <hr class="dropdown-divider">
