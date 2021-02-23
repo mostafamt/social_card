@@ -24,7 +24,7 @@ Route::get('/add', function () {
     return view('add');
 });
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@index');
 
 Route::get('/create', 'PagesController@create');
 Route::post('/create', 'PagesController@store');

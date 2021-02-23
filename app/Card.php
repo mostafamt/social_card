@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Card extends Model
 {
     //
-    protected $fillable = ['name', 'place_of_birth','title','image'];
+    protected $fillable = ['name', 'degree','place_of_birth','title','image'];
 
     public function user()
     {

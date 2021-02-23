@@ -25,6 +25,7 @@ class CardFormRequst extends FormRequest
     {
         return [
             //
+            'image' => 'required',
         ];
     }
 }

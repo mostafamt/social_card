@@ -20,22 +20,31 @@ class PagesController extends Controller
         return view('create');
     }
 
+    public function index()
+    {
+        $cards = Card::all();
+
+        return view('home')->with('cards', $cards);
+    }
+
     public function store(CardFormRequst $request)
     {
-        if ( $files = $request->file('image') ){
-            dd('success');
-        }
-        dd($request);
-        $input['image'] = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images'), $input['image']);
-        dd('success');
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $name = time().'.'.$file->getClientOriginalExtension();
+            $file->move(public_path() . '/images/', $name);
 
-        $card = new Card(array(
-            'name' => $request->get('name'),
-            'place_of_birth' => $request->get('place_of_birth')
-        ));
-        $card->save();
-        return redirect('/create')->with('status', 'تم اضافة كارت جديد!');
+            $card = new Card(array(
+                'degree' => $request->get('degree'),
+                'name' => $request->get('name'),
+                'place_of_birth' => $request->get('place_of_birth'),
+                'image' => $name,
+            ));
+            $card->save();
+
+            return redirect('/create')->with('status', 'تم اضافة الكارت بنجاح !');
+        }
+
     }
 
 }

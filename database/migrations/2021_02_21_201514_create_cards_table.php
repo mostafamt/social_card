@@ -15,9 +15,9 @@ class CreateCardsTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('degree');
             $table->string('name', 256);
             $table->string('place_of_birth', 256);
-            $table->string('title');
             $table->string('image');
             $table->timestamps();
         });
